@@ -2,7 +2,7 @@ Greetings to everyone who lived to see the fifth topic of our course!
 
 The course has already brought together more than 1,000 participants, of which 520, 450 and 360 persons respectively completed first 3 homework assignments. <img src="https://habrastorage.org/files/1f8/981/50a/1f898150a862463bae79b42e3da32beb.jpg" align="right" width="400" /> About 200 participants have so far the maximum score. The outflow is much lower than in MOOCs despite a wealth of information contained in our articles. //ИЛИ: despite the large volume(length) of our articles.
 
-This session will be devoted to simple machine learning ensemble methods: bagging and random forest. You will learn how you can get the distribution of the general population mean, if we have information only on a small part of it. We'll look how to reduce the variance and as a result to improve the accuracy of the model using compositions of algorithms. We'll also figure out what a random forest is, what its parameters need to be tuned up and how to find the most important feature. We'll focus on practice with just a "pinch" of mathematics.
+This session will be devoted to simple machine learning ensemble methods: bagging and random forest. You will learn how you can get the distribution of the general population mean, if you have information only on a small part of it. We'll look how to reduce the variance and as a result to improve the accuracy of the model using compositions of algorithms. We'll also figure out what a random forest is, what parameters in it need to be tuned and how to find the most important feature. Let's focus on practice with a small share //just a "pinch"// of mathematics.
 
 
 <spoiler title="Список статей серии">
@@ -27,14 +27,14 @@ This session will be devoted to simple machine learning ensemble methods: baggin
    - [Out-of-bag error](https://habrahabr.ru/company/ods/blog/324402/#out-of-bag-error)
 2. [Random forest](https://habrahabr.ru/company/ods/blog/324402/#2-sluchaynyy-les)
     - [Algorithm](https://habrahabr.ru/company/ods/blog/324402/#algoritm)
-    - [Сравнение с деревом решений и бэггингом](https://habrahabr.ru/company/ods/blog/324402/#sravnenie-s-derevom-resheniy-i-beggingom)
-    - [Параметры](https://habrahabr.ru/company/ods/blog/324402/#parametry)
-    - [Вариация и декорcfреляционный эффект](https://habrahabr.ru/company/ods/blog/324402/#variaciya-i-dekorrelyacionnyy-effekt)
-    - [Смещение](https://habrahabr.ru/company/ods/blog/324402/#smeschenie)
-    - [Сверхслучайные деревья](https://habrahabr.ru/company/ods/blog/324402/#sverhsluchaynye-derevya)
-    - [Схожесть с алгоритмом k-ближайших соседей](https://habrahabr.ru/company/ods/blog/324402/#shozhest-sluchaynogo-lesa-s-algoritmom-k-blizhayshih-sosedey)
-    - [Преобразование признаков в многомерное пространство](https://habrahabr.ru/company/ods/blog/324402/#preobrazovanie-priznakov-v-mnogomernoe-prostranstvo)
-3. [Оценка важности признаков](https://habrahabr.ru/company/ods/blog/324402/#3-ocenka-vazhnosti-priznakov)
+    - [Comparison with decision trees and bagging](https://habrahabr.ru/company/ods/blog/324402/#sravnenie-s-derevom-resheniy-i-beggingom)
+    - [Parameters](https://habrahabr.ru/company/ods/blog/324402/#parametry)
+    - [Variance and decorrelation effect](https://habrahabr.ru/company/ods/blog/324402/#variaciya-i-dekorrelyacionnyy-effekt)
+    - [Bias](https://habrahabr.ru/company/ods/blog/324402/#smeschenie)
+    - [Extremely Randomized Trees](https://habrahabr.ru/company/ods/blog/324402/#sverhsluchaynye-derevya)
+    - [The similarity with the k-nearest neighbors algorithm](https://habrahabr.ru/company/ods/blog/324402/#shozhest-sluchaynogo-lesa-s-algoritmom-k-blizhayshih-sosedey)
+    - [Convertion of parameters to multidimensional space](https://habrahabr.ru/company/ods/blog/324402/#preobrazovanie-priznakov-v-mnogomernoe-prostranstvo)
+3. [Feature importance assessment](https://habrahabr.ru/company/ods/blog/324402/#3-ocenka-vazhnosti-priznakov)
 4. [Плюсы и минусы случайного леса](https://habrahabr.ru/company/ods/blog/324402/#4-plyusy-i-minusy-sluchaynogo-lesa)
 5. [Домашнее задание №5](https://habrahabr.ru/company/ods/blog/324402/#5-domashnee-zadanie)
 6. [Полезные источники](https://habrahabr.ru/company/ods/blog/324402/#6-poleznye-istochniki)
