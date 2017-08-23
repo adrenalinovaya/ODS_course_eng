@@ -33,19 +33,19 @@ This session will be devoted to simple machine learning ensemble methods: baggin
     - [Bias](https://habrahabr.ru/company/ods/blog/324402/#smeschenie)
     - [Extremely Randomized Trees](https://habrahabr.ru/company/ods/blog/324402/#sverhsluchaynye-derevya)
     - [The similarity with the k-nearest neighbors algorithm](https://habrahabr.ru/company/ods/blog/324402/#shozhest-sluchaynogo-lesa-s-algoritmom-k-blizhayshih-sosedey)
-    - [Convertion of parameters to multidimensional space](https://habrahabr.ru/company/ods/blog/324402/#preobrazovanie-priznakov-v-mnogomernoe-prostranstvo)
+    - [Multidimensional representation of a features set](https://habrahabr.ru/company/ods/blog/324402/#preobrazovanie-priznakov-v-mnogomernoe-prostranstvo)
 3. [Feature importance assessment](https://habrahabr.ru/company/ods/blog/324402/#3-ocenka-vazhnosti-priznakov)
-4. [Плюсы и минусы случайного леса](https://habrahabr.ru/company/ods/blog/324402/#4-plyusy-i-minusy-sluchaynogo-lesa)
-5. [Домашнее задание №5](https://habrahabr.ru/company/ods/blog/324402/#5-domashnee-zadanie)
-6. [Полезные источники](https://habrahabr.ru/company/ods/blog/324402/#6-poleznye-istochniki)
+4. [Random Forest: pros and cons](https://habrahabr.ru/company/ods/blog/324402/#4-plyusy-i-minusy-sluchaynogo-lesa)
+5. [Homework №5](https://habrahabr.ru/company/ods/blog/324402/#5-domashnee-zadanie)
+6. [Reference list](https://habrahabr.ru/company/ods/blog/324402/#6-poleznye-istochniki)
 
 
 ##1. Bagging
-From the last lectures you learned about different classification algorithms, as well as how to validate and evaluate the quality of the model. But what if you've already found the best model and can no longer improve the accuracy of the model? In this case, you need to apply more advanced machine learning techniques, which can be jointly called "ensembles". Ensemble is a certain set, parts of which form a whole. From everyday life you know music ensembles, where several musical instruments are combined, or architectural ensembles with various buildings, etc. 
+From the last lectures you learned about different classification algorithms, as well as how to validate and evaluate the quality of the model. But what to do if you've already found the best model and can't improve its accuracy? In this case, you need to apply more advanced machine learning techniques, which can be jointly called "ensembles". Ensemble is a certain set, parts of which form a coherent whole. From everyday life you know music ensembles, where several musical instruments are combined, or architectural ensembles with various buildings, etc. 
 
 ### Ensembles
 
-A good example of ensembles is represented by Condorcet's jury theorem (1784). If each member of the jury has an independent opinion and the probability of correct decision of each juror is more than 0.5, then the probability of correct decision of the whole jury increases with the number of jurors and tends to one. At the same time, if the probability of being right is less than 0.5 for each juror, then the probability of correct decision by the jury decreases monotonically and tends to zero with an increasing number of jurors. 
+A good example of ensembles is Condorcet's jury theorem (1784). If each member of the jury has an independent opinion and the probability of correct decision of each juror is more than 0.5, then the probability of correct decision of the whole jury increases with the number of jurors and tends to one. At the same time, if the probability of being right is less than 0.5 for each juror, then the probability of correct decision by the jury decreases monotonically and tends to zero with an increasing number of jurors. 
 $inline$\large N $inline$ is the number of jurors
 $inline$\large p $inline$ is the probability of correct decision of a juror
 $inline$\large \mu $inline$ is the probability of correct decisions of the whole jury
@@ -54,8 +54,8 @@ $$display$$ \large \mu = \sum_{i=m}^{N}C_N^ip^i(1-p)^{N-i} $$display$$
 Если $inline$\large N \rightarrow \infty $inline$, то $inline$\large \mu \rightarrow 1 $inline$
 
 Let's look at another example of ensembles - "Wisdom of Crowds". Francis Galton in 1906 visited the market where a certain lottery was held for farmers. <img src="https://habrastorage.org/getpro/habr/post_images/d58/66e/f0b/d5866ef0bfe6416952f8ebc14f07ed2b.png" align="right" width=15% height=15%> 
-There were about 800 people, and they tried to guess the weight of the bull that stood in front of them. Bull weighed 1,198 pounds. None of the farmers guessed the exact weight of the bull, but if we computed the average of their predictions, we'd get 1197 pounds.
-This idea of error reduction was also used in machine learning.
+There were about 800 people, and they tried to guess the weight of the bull that stood in front of them. Bull weighed 1,198 pounds. None of the farmers guessed the exact weight of the bull, but if we compute the average of their predictions, we'd get 1,197 pounds.
+This idea of error reduction is also used in machine learning.
 
 
 ### Bootstrap
