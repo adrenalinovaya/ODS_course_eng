@@ -55,18 +55,18 @@ $$display$$ \large \mu = \sum_{i=m}^{N}C_N^ip^i(1-p)^{N-i} $$display$$
 
 Let's look at another example of ensembles - "Wisdom of Crowds". Francis Galton in 1906 visited the market where a certain lottery was held for farmers. <img src="https://habrastorage.org/getpro/habr/post_images/d58/66e/f0b/d5866ef0bfe6416952f8ebc14f07ed2b.png" align="right" width=15% height=15%> 
 There were about 800 people, and they tried to guess the weight of the bull that stood in front of them. Bull weighed 1,198 pounds. None of the farmers guessed the exact weight of the bull, but if we compute the average of their predictions, we'd get 1,197 pounds.
-This idea of error reduction is also used in machine learning.
+This idea of reducing error is also used in machine learning.
 
 
 ### Bootstrap
 
-Bagging (from Bootstrap aggregation) is one of the first and most basic kinds of ensembles. It was coined by [Leo Breiman](https://ru.wikipedia.org/wiki/Брейман,_Лео) in 1994.Bagging is based on a statistical method of bootstrap that allows to evaluate many parameters of complex distributions.
+Bagging (from Bootstrap aggregation) is one of the first and most basic types of ensemble methods. It was invented by [Leo Breiman](https://ru.wikipedia.org/wiki/Брейман,_Лео) in 1994. Bagging is based on a statistical method of bootstrap that allows to evaluate many parameters of complex distributions.
  
-Bootstrap method consists of the following. Suppose we have a sample $inline$\large X$inline$ of size $inline$\large N$inline$. Let's evenly draw a sample of $inline$\large N$inline$ objects with replacement. This means that we will select a random object of the sample $inline$\large N$inline$ times (we assume that each object is taken with equal probability $inline$\large \frac{1}{N}$inline$)), and each time we choose from all of the original $inline$\large N$inline$ objects. One can imagine a bag from which we pull beads: on each step, selected bead is returned to the bag, and the next selection is made with equal probability from the same number of beads. Note that due to replacement there will be duplicates. Let's label the new sample $inline$\large X_1$inline$. By repeating this procedure $inline$\large M$inline$ times we'll generate $inline$\large M$inline$ sub-samples $inline$\large X_1, \dots, X_M$inline$. Now we have a sufficiently large number of samples, and can evaluate various statistics of the initial distribution.
+Bootstrap method is as follows. Given a population $inline$\large X$inline$ of size $inline$\large N$inline$. Let's take $inline$\large N$inline$ random samples with replacement from a population. This means that every time we select a random element from the original sample of size $inline$\large N$inline$ and we do that $inline$\large N$inline$ times (each element is drawn with equal probability $inline$\large \frac{1}{N}$inline$) ИЛИ all elements are equally likely). One can imagine a bag from which we pull balls: on each step selected ball is returned to the bag, and the next selection is made with equal probability from the same number of balls. Note that because of putting balls back it can be duplicates. Let's call the new sample $inline$\large X_1$inline$. By repeating this procedure $inline$\large M$inline$ times we'll generate $inline$\large M$inline$ sub-samples $inline$\large X_1, \dots, X_M$inline$. Now we have a sufficient number of samples, and can evaluate various statistics of the initial distribution.
 
 ![image](https://github.com/Yorko/mlcourse_open/blob/master/img/bootstrap.jpg?raw=true)
 
-Let's take `telecom_churn` dataset that is already known to you from past lessons of our course. Recall that it is the task of binary classification of customer churn. One of the most important features in the dataset that is the number of calls to the service center that were made by the client. Let's try to vizualize the data and look at the distribution of this feature.
+For instance, let's consider already known from the previous lessons `telecom_churn` dataset. Recall that it's binary classification of customer churn. One of the most important features in the dataset is the number of calls to the service center made by the client. Let's try to vizualize the data and look at the distribution of this feature.
 
 <spoiler title="Code for downloading the data and plotting">
 ```python
