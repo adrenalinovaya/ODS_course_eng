@@ -88,7 +88,7 @@ plt.show()
 
 ![image](https://github.com/Yorko/mlcourse_open/blob/master/img/bootstrap_new.png?raw=true)
 
-As you can see, loyal customers make fewer calls to the service center than our former clients. Now it'd be a good idea to estimate the average number of calls done by each group. Since we have little data in the dataset, computing the mean is not quite right, it is better to apply our new knowledge of bootstrap. Let's generate 1000 new subsamples of our general population and do interval estimation of the mean.
+As you can see, loyal customers make fewer calls to the service center than former clients. Now it'd be a good idea to estimate the average number of calls done by each group. Since we have a small dataset this is not quite accurate to calculate the mean value of it, it might be better to apply our knowledge of bootstrap. Let's generate 1000 new subsamples of our general population and do interval estimation of the mean.
 
 <spoiler title="Code for constructing a confidence interval using the bootstrap">
 ```python
